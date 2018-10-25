@@ -7,18 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWithEmbeddedProject"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmbeddedNetCoreApp", "EmbeddedNetCoreApp\EmbeddedNetCoreApp.csproj", "{DB865084-F60A-46BA-88C9-FA8C68AC506B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenedNetStandardProject", "ReferenedNetStandardProject\ReferenedNetStandardProject.csproj", "{7E7AA3FC-F1E2-4D2B-975D-551196075420}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferencedNetCoreProjectByNetStandardOne", "ReferencedNetCoreProjectByNetStandardOne\ReferencedNetCoreProjectByNetStandardOne.csproj", "{2D50010C-3099-4837-9F1B-747268DBA3BB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90A23EB5-C55D-475E-B153-4AAE00C9D85A}"
 	ProjectSection(SolutionItems) = preProject
 		buildEmbedded.ps1 = buildEmbedded.ps1
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repro", "Repro", "{76DE2786-087F-4975-958E-1BF6741B3AB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFwProjReferencingPackageWithEmbeddedDotnetCoreCode", "NetFwProjReferencingPackageWithEmbeddedDotnetCoreCode\NetFwProjReferencingPackageWithEmbeddedDotnetCoreCode.csproj", "{1BDD6B94-5B84-408E-9AD8-3E8563B4C3F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{1BDD6B94-5B84-408E-9AD8-3E8563B4C3F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,14 +31,6 @@ Global
 		{DB865084-F60A-46BA-88C9-FA8C68AC506B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB865084-F60A-46BA-88C9-FA8C68AC506B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB865084-F60A-46BA-88C9-FA8C68AC506B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E7AA3FC-F1E2-4D2B-975D-551196075420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E7AA3FC-F1E2-4D2B-975D-551196075420}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E7AA3FC-F1E2-4D2B-975D-551196075420}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E7AA3FC-F1E2-4D2B-975D-551196075420}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D50010C-3099-4837-9F1B-747268DBA3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D50010C-3099-4837-9F1B-747268DBA3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D50010C-3099-4837-9F1B-747268DBA3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D50010C-3099-4837-9F1B-747268DBA3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BDD6B94-5B84-408E-9AD8-3E8563B4C3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BDD6B94-5B84-408E-9AD8-3E8563B4C3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BDD6B94-5B84-408E-9AD8-3E8563B4C3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU

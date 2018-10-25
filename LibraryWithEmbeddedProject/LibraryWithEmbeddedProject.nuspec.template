@@ -2,22 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>LibraryWithEmbeddedProject</id>
-        <version>1.0.0-custom-5</version>
+        <version>1.0.0-custom-6</version>
         <title>LibraryWithEmbeddedProject</title>
         <authors>Hibernating Rhinos</authors>
         <owners>Hibernating Rhinos</owners>
-      <description>Repro for dependencies issue</description>     
+        <description>Repro for dependencies issue</description>     
         <contentFiles>
             <files include="**/EmbeddedApp/**/*.*" buildAction="None" copyToOutput="true" />
-        </contentFiles>
-      <dependencies>
-        <group targetFramework=".NETFramework4.6.1">
-          <dependency id="ReferenedNetStandardProject" version="1.1" exclude="Build,Analyzers" />
-        </group>
-        <group targetFramework=".NETStandard2.0">
-          <dependency id="ReferenedNetStandardProject" version="1.1" exclude="Build,Analyzers" />
-          <dependency id="System.Runtime.Loader" version="4.3.0" exclude="Build,Analyzers" />
-        </group>
-      </dependencies>
+        </contentFiles>      
     </metadata>
 </package>

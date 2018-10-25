@@ -9,11 +9,6 @@
     <Configurations>Debug;Release</Configurations>
 
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ReferencedNetCoreProjectByNetStandardOne\ReferencedNetCoreProjectByNetStandardOne.csproj" />
-    <ProjectReference Include="..\ReferenedNetStandardProject\ReferenedNetStandardProject.csproj" />
-  </ItemGroup>
   
   <ItemGroup Condition="$(TargetFramework) == 'netstandard2.0'">
     <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />

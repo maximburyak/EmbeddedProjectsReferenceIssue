@@ -1,6 +1,4 @@
 
-
-
 function BuildEmbeddedNuget ($projectDir, $outDir, $serverSrcDir) {
     $EMBEDDED_SRC_DIR = [io.path]::combine($projectDir, "LibraryWithEmbeddedProject")
     
@@ -45,30 +43,6 @@ function BuildEmbeddedNuget ($projectDir, $outDir, $serverSrcDir) {
     }
 
     write-host "LibraryWithEmbeddedProject NuGet package in $OUT_DIR\LibraryWithEmbeddedProject.nupkg."
-}
-
-function BuildReferenedNetStandardProjectNuget ($projectDir, $outDir) {
-    $ReferenedNetStandardProject_SRC_DIR = [io.path]::combine($projectDir, "ReferenedNetStandardProject")
-        
-    $ReferenedNetStandardProject_OUT_DIR = [io.path]::combine($outDir, "ReferenedNetStandardProject")
-        
-    write-host "Building ReferenedNetStandardProjectNuget package"
-	
-	CreateNugetPackage $ReferenedNetStandardProject_SRC_DIR $ReferenedNetStandardProject_OUT_DIR
-	
-    
-    write-host "LibraryWithEmbeddedProject NuGet package in $OUT_DIR\ReferenedNetStandardProjectNuget.nupkg."
-}
-
-function CreateNugetPackage ( $srcDir, $targetFilename ) {
-
-    write-host -ForegroundColor Cyan "Calling: dotnet pack --output $targetFilename --configuration "Release" $srcDir"
-
-    dotnet pack --output $targetFilename `
-        --configuration "Release" `        
-        $srcDir
-
-    CheckLastExitCode
 }
 
 function BuildApp ( $srcDir, $outDir) {
@@ -135,4 +109,3 @@ $OUT_DIR = [io.path]::combine($PROJECT_DIR, "artifacts")
 $SERVER_SRC_DIR = [io.path]::combine($PROJECT_DIR, "EmbeddedNetCoreApp")
 
 BuildEmbeddedNuget $PROJECT_DIR $OUT_DIR $SERVER_SRC_DIR
-BuildReferenedNetStandardProjectNuget $PROJECT_DIR $OUT_DIR 
