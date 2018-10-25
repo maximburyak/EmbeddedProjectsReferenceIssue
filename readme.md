@@ -25,7 +25,7 @@ LibraryWithEmbeddedProject -  A Class Library, that is compiled into a nuget pac
 Artifacts - nuget package publishing result
 
 ##Files:
-------
+
 buildEmbedded.ps1 - a script resposible of the "LibraryWithEmbeddedProject" nuget package generation, it embeds the "EmbeddedNetCoreApp" binaries inside the nuget package, as a resource
 
 #Issue's origin
