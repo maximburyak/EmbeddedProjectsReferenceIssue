@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Library.With.EmbeddedProject</AssemblyName>
+    <PackageId>Library.With.EmbeddedProject</PackageId>
+
+    <Configurations>Debug;Release</Configurations>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReferencedNetCoreProjectByNetStandardOne\ReferencedNetCoreProjectByNetStandardOne.csproj" />
+    <ProjectReference Include="..\ReferenedNetStandardProject\ReferenedNetStandardProject.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="$(TargetFramework) == 'netstandard2.0'">
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+  </ItemGroup>
+
+
+</Project>
